@@ -41,7 +41,7 @@ app.use("/management", managementRoutes);
 app.use("/sales", salesRoutes);
 
 /* MONGOOSE SETUP */
-const PORT = process.env.PORT || 9000;
+const PORT = process.env.PORT || 6000;
 mongoose
   .connect(process.env.MONGODB_URL, {
     useNewUrlParser: true,
@@ -50,10 +50,10 @@ mongoose
   .then(() => {
     app.listen(PORT, () => console.log(`server running on Port: ${PORT}`));
 
-    //User.insertMany(dataUser);
-    //Product.insertMany(dataProduct);
-    //ProductStat.insertMany(dataProductStat);
-    //Transaction.insertMany(dataTransaction);
-    //OverallStat.insertMany(dataOverallStat);
+    // User.insertMany(dataUser);
+    // Product.insertMany(dataProduct);
+    // ProductStat.insertMany(dataProductStat);
+    // Transaction.insertMany(dataTransaction);
+    // OverallStat.insertMany(dataOverallStat);
   })
   .catch((error) => console.log(error));
